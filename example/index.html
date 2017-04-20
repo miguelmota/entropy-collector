@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript entropy collector</title>
+</head>
+<body>
+<h1>EntropyCollector</h1>
+<p><span id="events">0</span> events captured</p>
+<p><span id="bits-total">-</span> bits of entropy captured ( <span id="bits-per-event">-</span> bits per event )</p>
+<script src="../entropy-collector.js"></script>
+<script type="text/javascript">
+  var ec = new EntropyCollector();
+
+  function print () {
+      var n = ec.eventsCaptured;
+      var e = ec.estimatedEntropy;
+      document.getElementById('events').textContent = n;
+      document.getElementById('bits-total').textContent = e;
+      document.getElementById('bits-per-event').textContent = e/n;
+  }
+
+  ec.start();
+
+  setInterval(print, 300);
+</script>
+</body>

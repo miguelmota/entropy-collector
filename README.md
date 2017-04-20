@@ -12,10 +12,10 @@ npm install entropy-collector
 
 ## Quick start
 
-Add `<script src="path/to/entropy-collector.js"></script>` into your page,
+Add `<script src="path/to/entropy-collector.js"></script>` into your page,<br />
 or require using NPM `var EntropyCollector = require('entropy-collector')`.
 
-Instantiate class `var entropyCollector = new EntropyCollector()`.
+Instantiate class by doing `var entropyCollector = new EntropyCollector()`.
 
 Place `entropyCollector.start()` into a suitable place.
 
